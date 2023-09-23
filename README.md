@@ -1,16 +1,16 @@
-##__technology stack:__
+Technology stack:
 
 Servlets, Maven, Jackson, JDBC, PostreSQL,
 ___
 
-##__Description of the exchanger:__
+Description of the exchanger:
 
 REST API for describing currencies and exchange rates. Allows you to view and edit lists of currencies and exchange rates, and calculate the conversion of arbitrary amounts from one currency to another.
 
 There is no web interface for the project, that is, using POSTMAN we can use all the functionality
 ___
 
-##__API:__
+API:
 
 
 ##### __GET `/currency`__
@@ -49,7 +49,7 @@ Sample answer:
 }
 ```
 
-##### __POST `/currency/`__
+ __POST `/currency/`__
 
 Adding a new currency to the database, we are sending data in JSON format
 (in the CurrencyExchanger.postman file) 
@@ -64,8 +64,8 @@ respone:
 }
 ```
 
-####__Exchange Rates:__
-#####__GET `/exchangeRates/`__
+__Exchange Rates:__
+__GET `/exchangeRates/`__
 Getting a list of all exchange rates. Sample answer:
 
 ```json
@@ -106,7 +106,7 @@ Getting a list of all exchange rates. Sample answer:
 ]
 ```
 
-#####__GET `/exchangeRates/USDEUR`__
+__GET `/exchangeRates/USDEUR`__
 Getting a list of all exchange rates. Sample answer:
 
 ```json
@@ -130,7 +130,8 @@ Getting a list of all exchange rates. Sample answer:
 ]
 ```
 
-#####__GET `/exchange?from=BASE_CURRENCY_CODE&to=TARGET_CURRENCY_CODE&amount=$AMOUNT`__
+__GET `/exchange?from=BASE_CURRENCY_CODE&to=TARGET_CURRENCY_CODE&amount=$AMOUNT`__
+
 Calculation of the transfer of a certain amount of funds from one currency to another.
 
 Sample answer:
@@ -184,6 +185,7 @@ An example response is a JSON representation of a record inserted into the datab
 }
 ```
 ##### __PUT `/exchangeRates/USDEUR`__
+
 
 Update the existing exchange rate in the database. The currency pair is specified by consecutive currency codes in the request address. Data is transmitted in the body of the request in the JSON file. The only form field is `rate`.
 
