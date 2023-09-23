@@ -1,16 +1,16 @@
-##technology stack:
+##__technology stack:__
 
 Servlets, Maven, Jackson, JDBC, PostreSQL,
 ___
 
-##Description of the exchanger:
+##__Description of the exchanger:__
 
 REST API for describing currencies and exchange rates. Allows you to view and edit lists of currencies and exchange rates, and calculate the conversion of arbitrary amounts from one currency to another.
 
 There is no web interface for the project, that is, using POSTMAN we can use all the functionality
 ___
 
-##API:
+##__API:__
 
 
 ##### __GET `/currency`__
@@ -64,7 +64,7 @@ respone:
 }
 ```
 
-####Exchange Rates:
+####__Exchange Rates:__
 #####__GET `/exchangeRates/`__
 Getting a list of all exchange rates. Sample answer:
 
