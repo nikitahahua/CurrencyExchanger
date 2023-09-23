@@ -45,7 +45,7 @@ public class ExchangeRateController extends HttpServlet {
 
         String baseCurrencyCode = (String) jsonMap.get("baseCurrencyCode");
         String targetCurrencyCode = (String) jsonMap.get("targetCurrencyCode");
-        BigDecimal rate = (BigDecimal) jsonMap.get("rate");
+        BigDecimal rate = BigDecimal.valueOf((double) jsonMap.get("rate"));
         CurrencyRate currencyRate = null;
 
         try {
