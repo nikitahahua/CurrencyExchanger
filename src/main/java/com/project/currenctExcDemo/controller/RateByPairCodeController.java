@@ -51,7 +51,7 @@ public class RateByPairCodeController extends HttpServlet {
         Map<String, Object> jsonMap = objectMapper.readValue(req.getInputStream(), new TypeReference<Map<String, Object>>() {});
         ConvertJsonResp convertJsonResp = new ConvertJsonResp();
         String code = req.getPathInfo().substring(1);
-        BigDecimal rate = (BigDecimal) jsonMap.get("rate");
+        BigDecimal rate = BigDecimal.valueOf((double) jsonMap.get("rate"));
 
         if (code.length()!=6){
             resp.setStatus(400);
