@@ -49,7 +49,7 @@ Sample answer:
 }
 ```
 
- __POST `/currency/`__
+ __POST `/currency`__
 
 Adding a new currency to the database, we are sending data in JSON format
 (in the CurrencyExchanger.postman file) 
@@ -65,7 +65,7 @@ respone:
 ```
 
 __Exchange Rates:__
-__GET `/exchangeRates/`__
+__GET `/exchangeRates/all`__
 Getting a list of all exchange rates. Sample answer:
 
 ```json
@@ -160,7 +160,7 @@ Receiving an exchange rate can follow one of three scenarios. Let's say we make 
 1. There is a currency pair AB in the ExchangeRates table - take its rate
 2. There is a currency pair BA in the ExchangeRates table - take its rate and calculate the reverse to get AB
 3. In the ExchangeRates table there are currency pairs USD-A and USD-B - we calculate the AB rate from these rates
-##### __POST__ `/exchangeRates/`
+##### __POST__ `/exchangeRates/rate`
 
 Adding a new exchange rate to the database. Data is transmitted in the body of JSON file.
 
