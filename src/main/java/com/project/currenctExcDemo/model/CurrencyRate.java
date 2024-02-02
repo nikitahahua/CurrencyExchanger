@@ -1,5 +1,6 @@
 package com.project.currenctExcDemo.model;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,13 +8,26 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.util.Objects;
 
+@Entity
+@Table(name = "currency_rates")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class CurrencyRate {
-    private int id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "base_currency_id", nullable = false)
     private Currency baseCurrency ;
+
+    @ManyToOne
+    @JoinColumn(name = "target_currency_id", nullable = false)
     private Currency targetCurrency;
+
+    @Column(name = "rate")
     private BigDecimal rate;
 
     public CurrencyRate(Currency baseCurrency, Currency targetCurrency, BigDecimal rate) {

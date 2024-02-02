@@ -1,23 +1,35 @@
 package com.project.currenctExcDemo.model;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Objects;
 
+@Entity
+@Table(name = "currencies")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Currency {
-    private int id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    private Long id;
+
+    @Column(name = "currency_code")
     private String code;
-    private String FullName;
+
+    @Column(name = "full_name")
+    private String fullName;
+
+    @Column(name = "currency_sign")
     private String Sign;
 
     public Currency(String code, String fullName, String sign) {
         this.code = code;
-        FullName = fullName;
+        this.fullName = fullName;
         Sign = sign;
     }
 
@@ -26,11 +38,11 @@ public class Currency {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Currency currency = (Currency) o;
-        return Objects.equals(code, currency.code) && Objects.equals(FullName, currency.FullName) && Objects.equals(Sign, currency.Sign);
+        return Objects.equals(code, currency.code) && Objects.equals(fullName, currency.fullName) && Objects.equals(Sign, currency.Sign);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(code, FullName, Sign);
+        return Objects.hash(code, fullName, Sign);
     }
 }
