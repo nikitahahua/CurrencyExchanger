@@ -70,7 +70,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/exchangeRates"
+				"url": "http://localhost:8080/exchangeRates/all"
 			},
 			"response": []
 		},
@@ -84,22 +84,22 @@
 					"formdata": [
 						{
 							"key": "baseCurrencyCode",
-							"value": "RUB",
+							"value": "USD",
 							"type": "default"
 						},
 						{
 							"key": "targetCurrencyCode",
-							"value": "EUR",
+							"value": "DEM",
 							"type": "default"
 						},
 						{
 							"key": "rate",
-							"value": "0.015",
+							"value": "0.5",
 							"type": "default"
 						}
 					]
 				},
-				"url": "http://localhost:8080/exchangeRates"
+				"url": "http://localhost:8080/exchangeRates/rate"
 			},
 			"response": []
 		},
@@ -110,14 +110,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " {\n     \"rate\": 1.2\n }",
+					"raw": " {\n     \"rate\": 2.3\n }",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:8080/exchangeRates/USDEUR"
+				"url": "http://localhost:8080/exchangeRates/JPYUSD"
 			},
 			"response": []
 		},
@@ -148,23 +148,24 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/exchange?from=USD&to=RUB&amount=10",
+					"raw": "http://localhost:8080/exchange/?from=JPY&to=DEM&amount=10",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"exchange"
+						"exchange",
+						""
 					],
 					"query": [
 						{
 							"key": "from",
-							"value": "USD"
+							"value": "JPY"
 						},
 						{
 							"key": "to",
-							"value": "RUB"
+							"value": "DEM"
 						},
 						{
 							"key": "amount",
