@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "90bcdb64-d6df-4e39-80f3-dad2cde3fefd",
 		"name": "CurrencyExchanger",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "28709462"
 	},
 	"item": [
@@ -34,17 +34,7 @@
 					"mode": "formdata",
 					"formdata": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/currency",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"currency"
-					]
-				}
+				"url": "http://localhost:8080/currency"
 			},
 			"response": []
 		},
@@ -62,17 +52,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/currency",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"currency"
-					]
-				}
+				"url": "http://localhost:8080/currency"
 			},
 			"response": []
 		},
@@ -81,18 +61,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/currency/EUR",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"currency",
-						"EUR"
-					]
-				}
+				"url": "http://localhost:8080/currency/EUR"
 			},
 			"response": []
 		},
@@ -101,17 +70,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/exchangeRates",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"exchangeRates"
-					]
-				}
+				"url": "http://localhost:8080/exchangeRates"
 			},
 			"response": []
 		},
@@ -140,17 +99,7 @@
 						}
 					]
 				},
-				"url": {
-					"raw": "http://localhost:8080/exchangeRates",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"exchangeRates"
-					]
-				}
+				"url": "http://localhost:8080/exchangeRates"
 			},
 			"response": []
 		},
@@ -168,18 +117,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/exchangeRates/USDEUR",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"exchangeRates",
-						"USDEUR"
-					]
-				}
+				"url": "http://localhost:8080/exchangeRates/USDEUR"
 			},
 			"response": []
 		},
@@ -200,18 +138,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/exchangeRates/USDEUR",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"exchangeRates",
-						"USDEUR"
-					]
-				}
+				"url": "http://localhost:8080/exchangeRates/USDEUR"
 			},
 			"response": []
 		},
