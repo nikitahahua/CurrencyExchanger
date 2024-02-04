@@ -1,6 +1,6 @@
 Technology stack:
 
-Servlets, Maven, Jackson, JDBC, PostreSQL,
+Spring boot, Spring JPA, PostgreSQL, Hibernate, Maven, Mockito, JUnit
 ___
 
 Description of the exchanger:
